@@ -91,6 +91,8 @@ Una funcion puede tener parámetros. Estos son valores con los que la funcion tr
 
   El interprete de JS eleva las variables al inicio de su scope sin importar si fueron declaradas más adelante (pero no eleva su definicion, o sea, su valor).
 
+  Las variables siempre son elevadas pero solo su definición, no su valor. Por eso es mejor empezar siempre decarando las variables arriba.
+
   También eleva las funciones por declaracion, pero no las funciones por expresion.
 */
 
