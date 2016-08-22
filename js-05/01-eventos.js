@@ -30,36 +30,37 @@
   El eventHandler es ejecutado dentro de addEventListener, por lo que no requiere su invocación directamente.
 */
 
-(function(){
-  'use strict';
-  var miAlerta = function(){
-    alert("hiciste click");
-  };
-  addEventListener('click',miAlerta); // asociado al objeto global (objeto window)
-})();
-
-// Ejercicio: boton que da la hora
 // (function(){
 //   'use strict';
-//   var botonHora = document.getElementById('hora');
-//   botonHora.addEventListener('click', function(){
-//     var fecha     = new Date(),
-//         hora      = fecha.getHours(),
-//         minutos   = fecha.getMinutes(),
-//         segundos  = fecha.getSeconds();
-//     alert("La hora actual es " +  hora + ":" + minutos + ":" + segundos);
-//   });
+//   var miAlerta = function(){
+//     alert("hiciste click");
+//   };
+//   addEventListener('click',miAlerta); // asociado al objeto global (objeto window)
 // })();
 
-// // Ejercicio 2: obtener el tamaño de la ventana
-// (function(){
-//   addEventListener('resize', function(){
-//       var w = window.innerWidth,
-//       h = window.innerHeight;
-//       console.log('La ventana mide ' + w + ' x ' + h);
-//   });
-// })();
+// Ejercicio: boton que da la hora
+(function(){
+  'use strict';
+  var botonHora = document.getElementById('hora');
+  botonHora.addEventListener('click', function(){
+    var fecha     = new Date(),
+        hora      = fecha.getHours(),
+        minutos   = fecha.getMinutes(),
+        segundos  = fecha.getSeconds();
+    alert("La hora actual es " +  hora + ":" + minutos + ":" + segundos);
+  });
+})();
+
+// Ejercicio 2: obtener el tamaño de la ventana
+(function(){
+  addEventListener('resize', function(){
+      var w = window.innerWidth, //Permite medir el ancho de la ventana
+      h = window.innerHeight; //Permite medir el alto de la ventana
+      console.log('La ventana mide ' + w + ' x ' + h);
+  });
+})();
 
 /*OJO
-  El histing solo funciona con funciones por declaración
+  El histing solo funciona con funciones por declaración.
+  alert() es técnicamente un método del objeto window
 */
