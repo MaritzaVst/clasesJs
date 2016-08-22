@@ -15,13 +15,13 @@
 })();
 
 // Ejercicio: bloquear clic derecho de la pagina
-(function(){
-  'use strict';
-  window.addEventListener('mousedown', function(e){
-    console.log(e.which); // devuelve el código del boton pulsado
-    if(e.which === 3) {
-      alert("Esta prohibido copiar contenido de esta página");
-    }
-    e.preventDefault();
-  });
-})();
+// (function(){
+//   'use strict';
+//   window.addEventListener('mousedown', function(e){
+//     console.log(e.which); // devuelve el código del boton pulsado
+//     if(e.which === 3) {
+//       alert("Esta prohibido copiar contenido de esta página");
+//     }
+//     e.preventDefault();
+//   });
+// })();
